@@ -20,7 +20,7 @@ const Dashboard = () => {
     try {
       // ✅ Safety fix for environment variables
       const apiUrl = (typeof process !== 'undefined' && process.env.REACT_APP_API_URL) 
-                     || 'http://localhost:5000/api/metrics';
+                     || 'https://factory-backendw.onrender.com/api/metrics';
       
       const res = await fetch(apiUrl);
       if (!res.ok) throw new Error("Backend not responding");
